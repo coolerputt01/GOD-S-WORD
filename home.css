@@ -1,0 +1,222 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Parkinsans', sans-serif;
+  color:#333333;
+}
+body,html{
+  scroll-behavior: smooth;
+  background-color:#f6f9fe;
+  overflow-x:hidden;
+}
+.header{
+  position:fixed;
+  top:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100vw;
+  height: 10vh;
+  background-color:#00a8a8;
+  z-index:10;
+  overflow: hidden;
+}
+.bubbledown{
+  position: absolute;
+  top:0;
+  left:-3%;
+  width:40vw;
+  height:20vh;
+  background-color:#007878;
+  border-radius:50%;
+  opacity:0.2;
+  z-index: -1;
+}
+.bubbleup{
+  position: absolute;
+  bottom:0;
+  right:0;
+  width:40vw;
+  height:20vh;
+  background-color:#007878;
+  border-radius:50%;
+  opacity:0.3;
+  z-index:-1;
+}
+.header-title{
+  font-size:1.5em;
+  padding-left: 15px;
+  color:#FFFFFF;
+}
+.ai-icon{
+  font-size: 1.5em;
+  padding:12px;
+  color:#FFFFFF;
+}
+.music-icon{
+  font-size: 1.5em;
+  padding:12px;
+  color:#FFFFFF;
+}
+.settings-icon{
+  font-size: 1.5em;
+  padding:12px;
+  color:#FFFFFF;
+}
+.nav-bar{
+  position: fixed;
+  bottom:0;
+  display:flex;
+  align-items: center;
+  justify-content:space-evenly;
+  width:100%;
+  height:12vh;
+  background-color:#00a8a8;
+  border-top:0.5px solid black;
+  overflow:hidden;
+}
+.nav-bar i{
+  font-size: 1.3em;
+  color:#FFFFFF;
+}
+ .add-icon{
+   font-size: 1.8em;
+ }
+.user-home-panel{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+  width:100%;
+  height:100%;
+  margin-top:100px;
+  margin-bottom: 10px;
+  overflow-x: hidden;
+}
+.card-group{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+  gap:20%;
+}
+.bible-card{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+  width:90vw;
+  height:100%;
+  border:1px solid grey;
+  gap:5%;
+  border-radius:4%;
+  margin:0 auto;
+  margin:16px;
+  padding:15px;
+  padding-top:30px;
+  background: #FFFFFF;
+}
+.card-title{
+  width:100%;
+  text-align:center;
+  padding-bottom:15px;
+  padding-top:5px;
+  color:#990033;
+  font-size: 1.3em;
+}
+.card-text{
+  text-align:center;
+  padding:30px;
+  font-style: italic;
+}
+.bible-context{
+  color:black;
+  font-weight: bolder;
+  text-decoration: none;
+}
+.card-head{
+  position: relative;
+}
+.cancel-icon{
+  position: absolute;
+  right:-8%;
+  top:-23%;
+  color:grey;
+  margin:1px;
+  font-size: 1.1em;
+}
+.option-card{
+  display:flex;
+  align-items: center;
+  justify-content:space-evenly;
+  flex-direction:column;
+  width:100%;
+  height:100%;
+  border:1px solid black;
+  border-top:0.2px solid black;
+  padding:15px;
+  margin-bottom:30px;
+  border-radius:2px;
+  backdrop-filter:blur(50px);
+  background: #FFFFFF;
+}
+.option-card::nth-child(odd){
+  margin:50px;
+}
+.option-title{
+  font-size:1em;
+  width:100%;
+  text-align: left;
+}
+.option-description{
+  font-size:0.6em;
+  width:100%;
+  text-align: left;
+  color:grey;
+}
+
+dotlottie-player{
+  padding:18px;
+}
+.last-option-card{
+  margin-bottom:130px;
+}
+.guide-head{
+  width:100%;
+  text-align:center;
+  padding:50px;
+  color:#990033;
+}
+.icon{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:column;
+  gap:5px;
+}
+.icon-name{
+  color:#FFFFFF;
+  font-size:0.6em;
+}
+@media (min-width:768px){
+  .nav-bar{
+    height:5vh;
+  }
+  .header{
+    height:5vh;
+  }
+  i{
+   font-size:2.5em;
+   padding:8px;
+  }
+  .icon-name{
+    font-size: 1.1em;
+  }
+  .cancel-icon{
+    right:-40%;
+  }
+  .bible-card{
+    width:50vw;
+  }
+}

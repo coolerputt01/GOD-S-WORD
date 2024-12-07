@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og: description" content="Strengthen your Faith and improve your Christian life style with this website.">
+  <meta property="og:image" content="icon.webp">
+  <meta property="og:title" content="GOD'S WORD">
+  <title>GOD'S WORD</title>
+  <link rel="shortcut icon" href="icon.webp">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="preload" as="image" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjQ_09Jhwh_Y6EztJXB4iQ3Wz7xADjvIdbhTDTxl1UJw&s" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjQ_09Jhwh_Y6EztJXB4iQ3Wz7xADjvIdbhTDTxl1UJw&s" alt="Bible-img" class="bible-image" loading="lazy">
+  <div class="form">
+    <h2 class="authentication-head">GOD'S WORD</h2>
+    <p class="authentication-charge">Join us to worship Christ just in the way that pleases GOD.</p>
+    <input type="text" placeholder="Name" class="name">
+    <input type="email" placeholder="Email" class="email">
+    <div class="password-div">
+      <input type="password" placeholder="Password" class="password">
+      <i class="fa-regular fa-eye eye"></i>
+    </div>
+    <p class="warning-text">Please fill in credentials correctly.</p>
+    <button class="auth-button">Join Us</button>
+        <p class="already-text">Not new here?<a href="login.html">Login</a></p>
+  </div>
+  <script src="auth.js" type="module"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(registration => console.log('Service Worker registered:', registration))
+      .catch(error => console.error('Service Worker registration failed:', error));
+  }
+</script>
+</body>
+
+</html>
