@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og: description" content="Strengthen your Faith and improve your Christian life style with this website.">
+    <meta property="og:image" content="icon.webp">
+    <meta property="og:title" content="GOD'S WORD">
+    <title>GOD'S WORD</title>
+    <link rel="shortcut icon" href="icon.webp">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preload" as="lottie" href="https://lottie.host/7d901ea2-e9ea-4562-8a14-9bc81440ab1e/opqzQMktqj.lottie" />
+    <link rel="preload" as="image" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjQ_09Jhwh_Y6EztJXB4iQ3Wz7xADjvIdbhTDTxl1UJw&s" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+    <header class="header">
+      <h3 class="header-title">GOD'S WORD</h3>
+      <div class="nav-icon">
+        <i class="fa-solid fa-robot ai-icon"></i>
+        <i class="fa-solid fa-music music-icon"></i>
+      </div>
+      <span class="bubbleup"></span>
+      <span class="bubbledown"></span>
+    </header>
+    <h2 class="blog-header">Blogs</h2>
+    <dotlottie-player src="https://lottie.host/7d901ea2-e9ea-4562-8a14-9bc81440ab1e/opqzQMktqj.lottie" background="transparent" speed="1" style="height: 300px" loop autoplay></dotlottie-player>
+    <div class="blog-container">
+    </div>
+  <div class="nav-bar">
+      <div class="icon">
+        <i class="fa-solid fa-house house-icon"></i>
+        <p class="icon-name">Home</p>
+      </div>
+      <div class="icon">
+        <i class="fa-solid fa-book bible-icon"></i>
+        <p class="icon-name">Bible</p>
+      </div>
+      <div class="icon">
+        <i class="fa-solid fa-plus add-icon"></i>
+        <p class="icon-name">Add blog</p>
+      </div>
+      <div class="icon">
+        <i class="fa-solid fa-newspaper blog-icon"></i>
+        <p class="icon-name">Read blog</p>
+      </div>
+      <div class="icon">
+        <i class="fa-solid fa-camera video-chat-icon"></i>
+        <p class="icon-name">Video Chat
+      </div>
+      <span class="bubbleup"></span>
+      <span class="bubbledown"></span>
+  </div>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="blog.js" type="module">
+    
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => console.log('Service Worker registered:', registration))
+        .catch(error => console.error('Service Worker registration failed:', error));
+    }
+  </script>
+</body>
+
+</html>
