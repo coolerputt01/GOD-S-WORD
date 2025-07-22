@@ -1,0 +1,62 @@
+<style>
+  nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5em;
+  }
+  .image-container {
+    width: 17%;
+    height: 17%;
+    padding: 3.3px;
+  }
+  .image-container > img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 45vw;
+  }
+  .nav-links > * {
+    list-style: none;
+    width: 100%;
+  }
+  .links > * {
+    text-decoration: none;
+    color: #CD4631;
+    width: 100%;
+    font-weight: 200 !important;
+  }
+  .login {
+    padding: 9.87px;
+    background: transparent;
+    border: 1px solid #CD4631;
+    border-radius: 8px;
+  }
+  .signup {
+    padding: 9.87px;
+    background-color: #CD4631;
+    border-radius: 8px;
+    color: #FFFBFF;
+  }
+</style>
+<component>
+  <nav aria-label="Main Navigation">
+    <div class="image-container">
+      <img src="./assets/images/logo.gif" alt="GOD'S WORD LOGO">
+    </div>
+    <ul class="nav-links">
+      <li class="links">
+        <a href="/" class="login">Login</a>
+      </li>
+      <li class="links">
+        <a href="/" class="signup">Sign Up</a>
+      </li>
+    </ul>
+  </nav>
+</component>
