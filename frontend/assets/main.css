@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Etna';
+  src: url("./fonts/font.woff2") format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Etna', sans-serif;
+}
