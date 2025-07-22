@@ -1,0 +1,4 @@
+// Invalid.
+Logo - "https://i.ibb.co/8444nSLx5N7/GOD-S-WORD-Logo.gif"
+
+-- Valid Data
