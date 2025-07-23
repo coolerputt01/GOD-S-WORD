@@ -1,0 +1,41 @@
+@import "../main.css";
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 77vh;
+  flex-direction: column;
+}
+.hero-heading {
+  font-size: 5em;
+  text-align: left;
+  padding-left: 13px;
+  color: #963324;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.43);
+}
+.hero-heading > .color {
+  color: #edd5a4;
+}
+.hero > .hero-desc {
+  color: #d4cdbe;
+  padding-left: 13px;
+  width: 90%;
+  text-align: left;
+  font-size: 0.9em;
+}
+.buttons {
+  width: 90%;
+  height: auto;
+  padding: 18px;
+}
+.action {
+    border: none;
+    outline: none;
+    padding: 9.87px;
+    background-color: #9c2d1c;
+    border-radius: 8px;
+    color: #FFFBFF;
+    box-shadow: 5px 5px 13px -4px rgba(0,0,0,0.45);
+}
