@@ -233,7 +233,7 @@ footer {
 
 
 /* Responsiveness */
-@media (min-width:768px) {
+@media (min-width:499px) {
   * {
     overflow: hidden !important;
   }
