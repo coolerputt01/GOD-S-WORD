@@ -1,5 +1,27 @@
 @import "../main.css";
 
+header {
+  background: transparent;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  top: 0;
+  z-index: 1000;
+}
+body {
+  position: relative;
+}
+body::after {
+  content: '';
+  position: absolute;
+  width: 30em;
+  height: 30em;
+  background-color: #963324;
+  border-radius: 50%;
+  top: -14em;
+  left: 5.6em;
+  opacity: 0.22;
+  z-index: 1;
+}
 .hero {
   display: flex;
   justify-content: center;
@@ -7,6 +29,8 @@
   width: 100vw;
   height: 77vh;
   flex-direction: column;
+  position: relative;
+  margin-top: 3em;
 }
 .hero-heading {
   font-size: 5em;
@@ -14,6 +38,7 @@
   padding-left: 13px;
   color: #963324;
   text-shadow: 2px 2px 12px rgba(0,0,0,0.43);
+  z-index: 10;
 }
 .hero-heading > .color {
   color: #edd5a4;
@@ -24,6 +49,7 @@
   width: 90%;
   text-align: left;
   font-size: 0.9em;
+  z-index: 10;
 }
 .buttons {
   width: 90%;
@@ -38,4 +64,226 @@
     border-radius: 8px;
     color: #FFFBFF;
     box-shadow: 5px 5px 13px -4px rgba(0,0,0,0.45);
+    animation: shake 2s infinite ease;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  background-image: url("/frontend/assets/images/Jesus Character/Jesus--Hi.gif");
+  background-size: 7em 7em;
+  background-position: center;
+  mix-blend-mode: darken;
+  width: 7em;
+  height: 7em;
+  right: 1.7em;
+  transform: rotate(0deg);
+  top: 35%;
+  z-index: 2;
+}
+.what-header {
+  font-size: 2em;
+  text-align: left;
+  margin-left: 13px;
+  padding-left: 13px;
+  color: #963324;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.23);
+  z-index: 10;
+  border-bottom: 3px solid #963336;
+  width: 50%;
+}
+.what-subtext {
+  color: #d4cdbe;
+  opacity: 0.9;
+  padding-top: 13px;
+  padding-left: 13px;
+  width: 90%;
+  text-align: center;
+}
+.landing-card {
+  margin-top: 5em;
+  padding-left: 13px;
+  margin-bottom: 5em;
+}
+.landing-card-image {
+  width: 13em;
+  height: 13em;
+  mix-blend-mode: darken;
+}
+.landing-card-head {
+  font-size: 1.7em;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: #963324;
+}
+.landing-card-text {
+  color: rgba(0,0,0,0.23);
+}
+.swing-wrapper {
+  margin-top: 10em;
+}
+.action-card {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 2.3em;
+  text-align: center;
+  background: #4C061D;
+  border-radius: 20px;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.23);
+  position: relative;
+  animation: swing 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+/* Rope effect */
+.action-card::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  width: 4px;
+  height: 64px;
+  background: #ccc;
+  transform: translateX(-50%);
+}
+
+/* Circle pin (where rope connects) */
+.action-card::after {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #666;
+  background-attachment: fixed;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+.action-card > h2 {
+  color: #fff;
+}
+
+.action-card > p {
+  color: rgba(255,255,255,0.6);
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+/* Button style */
+.action-card button {
+  margin-top: 15px;
+  padding: 12px 24px;
+  background: #4CAF50;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.action-card button:hover {
+  background: #388E3C;
+}
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: 50px;
+  border-top: 2px solid #444;
+}
+.responsive {
+  display: none;
+}
+/* Animations */
+@keyframes shake {
+  0% {
+    transform: rotate(2deg);
+  }
+  5% {
+    transform: rotate(7deg);
+    background-color: #c74632;
+  }
+  15% {
+    transform: rotate(3deg);
+  }
+  45% {
+    background-color: #963324;
+  }
+  50% {
+    transform: rotate(-7deg);
+    background-color: #c74632;
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes swing {
+  0% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  100% { transform: rotate(2deg); }
+}
+
+
+/* Responsiveness */
+@media (min-width:768px) {
+  * {
+    overflow: hidden !important;
+  }
+  main {
+    width: 0vw !important;
+    height: 0vh !important;
+    overflow: hidden;
+  }
+  body {
+    overflow: hidden !important;
+    height: 100vh !important;
+    background: red;
+  }
+  body::after {
+    width: 100% !important;
+    height: 100% !important;
+    background: #222;
+    border-radius: 0px;
+    z-index: 1000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+  .responsive {
+    position: absolute;
+    z-index: 1001;
+    left: calc(100% -50px);
+    top: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .responsive > *{
+    color: #fff;
+  }
+  .responsive-image {
+    width: 40em;
+    height: 40em;
+    margin: 0 auto;
+  }
+  .responsive > h2 {
+    font-size: 2.5em;
+    text-align: center;
+    width: 100%;
+  }
+  main > * {
+    width: 0px !important;
+    height: 0px !important;
+  }
 }

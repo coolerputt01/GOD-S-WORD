@@ -5,6 +5,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 5em;
+    background: transparent;
   }
   .image-container {
     width: 17%;
