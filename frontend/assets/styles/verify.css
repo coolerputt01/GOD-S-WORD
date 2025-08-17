@@ -20,6 +20,7 @@ body, html{
 }
 .verify-container > h1 {
   font-size: 2em;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.3);
 }
 .verify-container > p {
   color: rgba(0,0,0,0.4);
@@ -27,6 +28,9 @@ body, html{
   text-align: center;
   margin-top: 1em;
   width: 90vw;
+}
+.verify-container > p > b {
+  color: rgba(0,0,0,0.6);
 }
 .verify-container > a {
   font-size: 0.9em;
@@ -44,32 +48,5 @@ body, html{
   color: #fff;
   background: #c74632;
   width: 70vw;
-  animation: shake 1.2s infinite ease;
-}
-
-/* Animations */
-@keyframes shake {
-  0% {
-    transform: rotate(2deg);
-  }
-  5% {
-    transform: rotate(3deg);
-    background-color: #c74632;
-  }
-  15% {
-    transform: rotate(1deg);
-  }
-  45% {
-    background-color: #963324;
-  }
-  50% {
-    transform: rotate(-2deg);
-    background-color: #c74632;
-  }
-  75% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(2deg);
-  }
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
