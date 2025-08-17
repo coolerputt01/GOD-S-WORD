@@ -1,0 +1,91 @@
+@import "../main.css";
+
+body,html{
+  overflow: auto;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+.container > p {
+  color: rgba(255,255,255,0.6);
+}
+/* Header */
+.header {
+  background: #1a1a1a;
+  padding: 1rem 0;
+  border-bottom: 2px solid #c74632;
+}
+
+.header .logo {
+  color: #c74632;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.header nav {
+  float: right;
+}
+
+.header nav a {
+  color: #eaeaea;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header nav a:hover,
+.header nav a.active {
+  color: #c74632;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #c74632, #4C061D);
+  color: #fff;
+  padding: 3rem 0;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+}
+
+.hero h2 {
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+/* Policy Content */
+.policy {
+  padding: 2rem 0;
+}
+
+.policy h3 {
+  color: #c74632;
+  margin-top: 2rem;
+}
+
+.policy p {
+  margin-bottom: 1rem;
+  color: rgba(0,0,0,0.6);
+}
+p > a {
+  color: #388E3C;
+}
+
+/* Footer */
+.footer {
+  bottom: 0;
+  background: #1a1a1a;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  border-top: 2px solid #c74632;
+}
+
+.footer p {
+  margin: 0;
+  color: #aaa;
+}

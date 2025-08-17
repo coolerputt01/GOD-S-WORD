@@ -1,0 +1,75 @@
+@import "../main.css";
+
+body, html{
+  overflow: hidden;
+  scroll-behavior: smooth;
+  background: #fff;
+}
+
+.verify-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.verify-container > img {
+  width: 100vw;
+  height: 26em;
+  object-fit: cover;
+  image-rendering: rendering;
+}
+.verify-container > h1 {
+  font-size: 2em;
+}
+.verify-container > p {
+  color: rgba(0,0,0,0.4);
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 1em;
+  width: 90vw;
+}
+.verify-container > a {
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 3em;
+  color: #389333;
+}
+.verify-container > button {
+  text-align: center;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-top: 2em;
+  color: #fff;
+  background: #c74632;
+  width: 70vw;
+  animation: shake 1.2s infinite ease;
+}
+
+/* Animations */
+@keyframes shake {
+  0% {
+    transform: rotate(2deg);
+  }
+  5% {
+    transform: rotate(3deg);
+    background-color: #c74632;
+  }
+  15% {
+    transform: rotate(1deg);
+  }
+  45% {
+    background-color: #963324;
+  }
+  50% {
+    transform: rotate(-2deg);
+    background-color: #c74632;
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}

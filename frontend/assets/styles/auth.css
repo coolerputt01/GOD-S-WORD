@@ -1,0 +1,149 @@
+@import "../main.css";
+
+body {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh !important;
+  padding: 20px;
+  overflow: hidden !important;
+}
+html {
+  overflow: hidden !important;
+}
+
+/* Signup Card */
+.signup-container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 2em;
+  border-radius: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #c74632;
+  transition: 0.3s ease;
+  /*margin-top: 15em;*/
+  overflow: hidden !important;
+}
+
+.signup-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #c74632;
+  font-size: 1.8rem;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-bottom: 1.5px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #c74632;
+  box-shadow: 0 0 0 3px rgba(199, 70, 50, 0.15);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background: #c74632;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  animation: shake 2s infinite ease;
+}
+
+button:hover {
+  background: #a83425;
+  animation: none;
+}
+
+/* Extra Links */
+.extra-link {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.extra-link a {
+  color: #388E3C;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.extra-link a:hover {
+  text-decoration: underline;
+}
+.privacy-note {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #999;
+}
+
+.privacy-note a {
+  color: #389333;
+  text-decoration: underline;
+}
+
+.privacy-note a:hover {
+  text-decoration: underline;
+}
+/* Animations */
+@keyframes shake {
+  0% {
+    transform: rotate(2deg);
+  }
+  5% {
+    transform: rotate(3deg);
+    background-color: #c74632;
+  }
+  15% {
+    transform: rotate(1deg);
+  }
+  45% {
+    background-color: #963324;
+  }
+  50% {
+    transform: rotate(-2deg);
+    background-color: #c74632;
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
