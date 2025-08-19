@@ -134,7 +134,7 @@ button:hover {
     transform: rotate(1deg);
   }
   45% {
-    background-color: #963324;
+      background-color: #963324;
   }
   50% {
     transform: rotate(-2deg);

@@ -15,6 +15,5 @@ body,html {
   background: #FFFBFF;
   overflow-x: hidden;
   overflow-y: auto;
-  height: 200vh;
   scroll-behavior: smooth;
 }
