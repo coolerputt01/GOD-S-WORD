@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bible | GOD'S WORD</title>
+  <!-- (Optional) Font Awesome for icons -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="../assets/styles/bible.css" />
+</head>
+<body>
+  <!-- Topbar -->
+  <header class="topbar" role="banner">
+    <h1 class="app-title">📖 Holy Bible</h1>
+    <button class="profile-btn" aria-label="Open Profile">
+      <img src="https://i.pravatar.cc/60" alt="User" />
+    </button>
+  </header>
+
+  <main class="container" role="main">
+    <!-- Search -->
+    <section class="search-section" aria-labelledby="search-label">
+      <label id="search-label" class="sr-only" for="search-input">Search verses</label>
+      <div class="search-bar">
+        <input id="search-input" type="text" placeholder="Search verses or keywords…" autocomplete="off" />
+        <button class="search-btn" aria-label="Search">🔎</button>
+      </div>
+    </section>
+
+    <!-- Quick Book Navigation -->
+    <section class="books-section" aria-labelledby="books-title">
+      <h2 id="books-title" class="section-title">Books</h2>
+      <div class="book-rail" role="list">
+        <button class="book-pill" role="listitem">Genesis</button>
+        <button class="book-pill" role="listitem">Exodus</button>
+        <button class="book-pill" role="listitem">Psalms</button>
+        <button class="book-pill" role="listitem">Proverbs</button>
+        <button class="book-pill" role="listitem">Matthew</button>
+        <button class="book-pill" role="listitem">John</button>
+        <button class="book-pill" role="listitem">Acts</button>
+        <button class="book-pill" role="listitem">Romans</button>
+        <button class="book-pill" role="listitem">1 Corinthians</button>
+      </div>
+    </section>
+
+    <!-- Chapter Header / Picker -->
+    <section class="picker-section" aria-label="Chapter picker">
+      <div class="picker">
+        <div class="picker-group">
+          <label for="book-select">Book</label>
+          <select id="book-select">
+            <option>John</option>
+            <option>Genesis</option>
+            <option>Psalms</option>
+            <option>Matthew</option>
+            <option>Romans</option>
+          </select>
+        </div>
+        <div class="picker-group">
+          <label for="chapter-select">Chapter</label>
+          <select id="chapter-select">
+            <option>3</option>
+            <option>1</option>
+            <option>2</option>
+            <option>4</option>
+          </select>
+        </div>
+      </div>
+      <div class="picker-actions">
+        <button class="pill-btn" aria-label="Previous Chapter">← Prev</button>
+        <button class="pill-btn" aria-label="Next Chapter">Next →</button>
+      </div>
+    </section>
+
+    <!-- Chapter Content -->
+    <section class="chapter-card" aria-labelledby="chapter-title">
+      <header class="chapter-header">
+        <h2 id="chapter-title">John 3</h2>
+        <button class="fav-toggle" aria-pressed="false" aria-label="Toggle favorite">
+          ⭐
+        </button>
+      </header>
+      <article class="chapter-text">
+        <p><sup>16</sup> For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.</p>
+        <p><sup>17</sup> For God did not send his Son into the world to condemn the world, but to save the world through him.</p>
+      </article>
+
+      <!-- Audio Controls (UI only; hook up with JS/Web Speech later) -->
+      <div class="audio-bar" role="group" aria-label="Audio controls">
+        <button class="audio-btn" aria-label="Previous Chapter">⏮️</button>
+        <button class="audio-btn primary" aria-label="Play/Pause">▶️</button>
+        <button class="audio-btn" aria-label="Next Chapter">⏭️</button>
+        <div class="progress">
+          <span class="time">00:00</span>
+          <div class="track">
+            <div class="fill" style="width: 0%"></div>
+          </div>
+          <span class="time">03:21</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Favorites -->
+    <section class="favorites-section" aria-labelledby="favorites-title">
+      <h2 id="favorites-title" class="section-title">Favorites</h2>
+      <ul class="fav-list">
+        <li class="fav-item">
+          <span>John 3:16</span>
+          <button class="icon-btn" aria-label="Remove John 3:16 from favorites">🗑️</button>
+        </li>
+        <li class="fav-item">
+          <span>Psalm 23:1</span>
+          <button class="icon-btn" aria-label="Remove Psalm 23:1 from favorites">🗑️</button>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Bottom Navbar -->
+  <nav class="navbar" role="navigation" aria-label="Primary">
+    <a href="#" class="nav-link active" aria-current="page">
+      <span class="icon">🏠</span>
+      <span class="label">Home</span>
+    </a>
+    <a href="#" class="nav-link">
+      <span class="icon">📖</span>
+      <span class="label">Bible</span>
+    </a>
+    <a href="#" class="nav-link">
+      <span class="icon">🤖</span>
+      <span class="label">AI</span>
+    </a>
+    <a href="#" class="nav-link">
+      <span class="icon">✍️</span>
+      <span class="label">Blogs</span>
+    </a>
+    <a href="#" class="nav-link">
+      <span class="icon">🎥</span>
+      <span class="label">Video</span>
+    </a>
+  </nav>
+</body>
+</html>
