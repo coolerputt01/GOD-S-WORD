@@ -114,6 +114,7 @@ select:focus {
 }
 .picker-actions{
   display: flex; gap: 0.6rem;
+  margin-top: 1.2em;
 }
 .pill-btn{
   flex: 1; text-align: center; background: var(--brand-weak); color: var(--brand);
