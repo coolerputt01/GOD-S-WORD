@@ -6,7 +6,7 @@
   --card: #ffffff;
   --text: #1f2937;
   --muted: #6b7280;
-  --brand: #4a6cf7;
+  --brand: #c74632;
   --brand-weak: #e8edff;
   --border: #e5e7eb;
   --shadow: 0 4px 16px rgba(0,0,0,0.08);
@@ -175,7 +175,51 @@ select:focus {
 .icon-btn{
   border: none; background: #f3f4f6; border-radius: 10px; padding: 0.4rem 0.55rem; cursor: pointer;
 }
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  font-family: sans-serif;
+}
 
+.dropdown-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0;
+  list-style: none;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdown-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background: #f2f2f2;
+}
+
+.hidden {
+  display: none;
+}
 /* Bottom Navbar */
 .navbar{
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 20;

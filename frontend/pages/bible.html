@@ -44,16 +44,12 @@
     <!-- Chapter Header / Picker -->
     <section class="picker-section" aria-label="Chapter picker">
       <div class="picker">
-        <div class="picker-group">
-          <label for="book-select">Book</label>
-          <select id="book-select">
-            <option>John</option>
-            <option>Genesis</option>
-            <option>Psalms</option>
-            <option>Matthew</option>
-            <option>Romans</option>
-          </select>
-        </div>
+        <div class="custom-dropdown" id="book-dropdown">
+  <button class="dropdown-btn">Select Book ⬇️</button>
+  <ul class="dropdown-list hidden">
+    <!-- JS will populate book items here -->
+  </ul>
+</div>
         <div class="picker-group">
           <label for="chapter-select">Chapter</label>
           <select id="chapter-select">
@@ -122,5 +118,8 @@
       <span class="label">Video</span>
     </a>
   </nav>
+  <script type="text/javascript" charset="utf-8" src="../assets/scripts/bible.js">
+    
+  </script>
 </body>
 </html>
