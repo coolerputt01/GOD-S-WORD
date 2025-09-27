@@ -141,9 +141,40 @@ select:focus {
   font-weight: 700; margin-right: 6px; color: var(--muted);
 }
 
+.chapter-card {
+  position: relative;
+  padding-bottom: 4rem; /* leave space below for the audio bar */
+}
+
+.chapter-header {
+  margin-bottom: 1rem;
+}
+
+.audio-bar {
+  position: sticky;
+  top: 0; /* sticks to top of the chapter-card when scrolling */
+  background: #fff; /* ensure background covers verses when overlapping */
+  padding: 0.75rem;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  z-index: 10; /* keep above verses */
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-height: 40vh !important;
+}
+
+.chapter-text {
+  margin-top: 1rem;
+  max-height: 70vh; /* optional: limit height for scrolling inside */
+  overflow-y: auto; /* so verses scroll while audio stays pinned */
+  padding-right: 0.5rem;
+}
+
 /* Audio bar */
 .audio-bar{
-  display: grid; gap: 0.6rem; padding: 0.8rem 1rem 1rem;
+  display: flex; gap: 0.6rem; padding: 0.8rem 1rem 1rem;
+  flex-direction: column;
 }
 .audio-btn{
   border: 1px solid var(--border); background: #f8fafc; border-radius: 999px;
@@ -175,51 +206,37 @@ select:focus {
 .icon-btn{
   border: none; background: #f3f4f6; border-radius: 10px; padding: 0.4rem 0.55rem; cursor: pointer;
 }
-.custom-dropdown {
-  position: relative;
-  display: inline-block;
-  width: 200px;
-  font-family: sans-serif;
-}
-
+.custom-dropdown { position: relative; width: 100%; max-width: 300px; font-family: inherit; }
 .dropdown-btn {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background: white;
+  padding: 10px 12px;
   text-align: left;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 8px;
   cursor: pointer;
 }
-
 .dropdown-list {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 6px);
   left: 0;
-  width: 100%;
+  right: 0;
   margin: 0;
-  padding: 5px 0;
+  padding: 6px 0;
   list-style: none;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  max-height: 200px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  border-radius: 8px;
+  max-height: 240px;
   overflow-y: auto;
-  z-index: 10;
+  z-index: 50;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
-
-.dropdown-list li {
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
-.dropdown-list li:hover {
-  background: #f2f2f2;
-}
-
-.hidden {
-  display: none;
-}
+.dropdown-list li { padding: 8px 12px; cursor: pointer; }
+.dropdown-list li[aria-selected="true"], .dropdown-list li:hover { background:#f4f4f6; }
+.hidden { display: none; }
+.picker { display:flex; gap:16px; flex-wrap:wrap; align-items:flex-start; }
+.picker-group { min-width: 200px; flex:1; }
 /* Bottom Navbar */
 .navbar{
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 20;

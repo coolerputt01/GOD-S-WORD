@@ -42,25 +42,26 @@
     </section>
 
     <!-- Chapter Header / Picker -->
-    <section class="picker-section" aria-label="Chapter picker">
-      <div class="picker">
-        <div class="custom-dropdown" id="book-dropdown">
-  <button class="dropdown-btn">Select Book ⬇️</button>
-  <ul class="dropdown-list hidden">
-    <!-- JS will populate book items here -->
-  </ul>
-</div>
-        <div class="picker-group">
-          <label for="chapter-select">Chapter</label>
-          <select id="chapter-select">
-            <option>3</option>
-            <option>1</option>
-            <option>2</option>
-            <option>4</option>
-          </select>
-        </div>
+    <!-- Chapter Header / Picker (custom dropdowns) -->
+<section class="picker-section" aria-label="Chapter picker">
+  <div class="picker">
+    <div class="picker-group">
+      <label for="book-dropdown-btn">Book</label>
+      <div class="custom-dropdown" id="book-dropdown" data-type="book">
+        <button id="book-dropdown-btn" class="dropdown-btn" aria-haspopup="listbox" aria-expanded="false">Select Book ▼</button>
+        <ul class="dropdown-list hidden" role="listbox" tabindex="-1" aria-labelledby="book-dropdown-btn"></ul>
       </div>
-    </section>
+    </div>
+
+    <div class="picker-group">
+      <label for="chapter-dropdown-btn">Chapter</label>
+      <div class="custom-dropdown" id="chapter-dropdown" data-type="chapter">
+        <button id="chapter-dropdown-btn" class="dropdown-btn" aria-haspopup="listbox" aria-expanded="false">Select Chapter ▼</button>
+        <ul class="dropdown-list hidden" role="listbox" tabindex="-1" aria-labelledby="chapter-dropdown-btn"></ul>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Chapter Content -->
     <section class="chapter-card" aria-labelledby="chapter-title">
@@ -77,9 +78,11 @@
 
       <!-- Audio Controls (UI only; hook up with JS/Web Speech later) -->
       <div class="audio-bar" role="group" aria-label="Audio controls">
+        <div class="controls">
         <button class="audio-btn" aria-label="Previous Chapter">⏮️</button>
-        <button class="audio-btn primary" aria-label="Play/Pause">▶️</button>
+        <button class="audio-btn primary play no" aria-label="Play/Pause">▶️</button>
         <button class="audio-btn" aria-label="Next Chapter">⏭️</button>
+        </div>
         <div class="progress">
           <span class="time">00:00</span>
           <div class="track">
@@ -118,6 +121,7 @@
       <span class="label">Video</span>
     </a>
   </nav>
+  <script src="https://js.puter.com/v2/"></script>
   <script type="text/javascript" charset="utf-8" src="../assets/scripts/bible.js">
     
   </script>
