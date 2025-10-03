@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bible | GOD'S WORD</title>
-  <!-- (Optional) Font Awesome for icons -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
 
   <!-- App CSS -->
   <link rel="stylesheet" href="../assets/styles/bible.css" />
@@ -42,60 +40,64 @@
     </section>
 
     <!-- Chapter Header / Picker -->
-    <!-- Chapter Header / Picker (custom dropdowns) -->
-<section class="picker-section" aria-label="Chapter picker">
-  <div class="picker">
-    <div class="picker-group">
-      <label for="book-dropdown-btn">Book</label>
-      <div class="custom-dropdown" id="book-dropdown" data-type="book">
-        <button id="book-dropdown-btn" class="dropdown-btn" aria-haspopup="listbox" aria-expanded="false">Select Book ▼</button>
-        <ul class="dropdown-list hidden" role="listbox" tabindex="-1" aria-labelledby="book-dropdown-btn"></ul>
-      </div>
-    </div>
+    <section class="picker-section" aria-label="Chapter picker">
+      <div class="picker">
+        <div class="picker-group">
+          <label for="book-dropdown-btn">Book</label>
+          <div class="custom-dropdown" id="book-dropdown" data-type="book">
+            <button id="book-dropdown-btn" class="dropdown-btn" aria-haspopup="listbox" aria-expanded="false">Select Book ▼</button>
+            <ul class="dropdown-list hidden" role="listbox" tabindex="-1" aria-labelledby="book-dropdown-btn"></ul>
+          </div>
+        </div>
 
-    <div class="picker-group">
-      <label for="chapter-dropdown-btn">Chapter</label>
-      <div class="custom-dropdown" id="chapter-dropdown" data-type="chapter">
-        <button id="chapter-dropdown-btn" class="dropdown-btn" aria-haspopup="listbox" aria-expanded="false">Select Chapter ▼</button>
-        <ul class="dropdown-list hidden" role="listbox" tabindex="-1" aria-labelledby="chapter-dropdown-btn"></ul>
+        <div class="picker-group">
+          <label for="chapter-dropdown-btn">Chapter</label>
+          <div class="custom-dropdown" id="chapter-dropdown" data-type="chapter">
+            <button id="chapter-dropdown-btn" class="dropdown-btn" aria-haspopup="listbox" aria-expanded="false">Select Chapter ▼</button>
+            <ul class="dropdown-list hidden" role="listbox" tabindex="-1" aria-labelledby="chapter-dropdown-btn"></ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Chapter Content -->
     <section class="chapter-card" aria-labelledby="chapter-title">
       <header class="chapter-header">
-        <h2 id="chapter-title">John 3</h2>
-        <button class="fav-toggle" aria-pressed="false" aria-label="Toggle favorite">
-          ⭐
-        </button>
+        <h2 id="chapter-title">Loading...</h2>
       </header>
-      <article class="chapter-text">
-        <p><sup>16</sup> For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.</p>
-        <p><sup>17</sup> For God did not send his Son into the world to condemn the world, but to save the world through him.</p>
+
+      <!-- Skeleton loader -->
+      <article class="chapter-text loading">
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line"></div>
       </article>
 
-      <!-- Audio Controls (UI only; hook up with JS/Web Speech later) -->
+      <!-- Loading circle -->
+      <div class="loading-circle"></div>
+
+      <!-- Audio Controls -->
       <div class="audio-bar" role="group" aria-label="Audio controls">
         <div class="controls">
-        <button class="audio-btn" aria-label="Previous Chapter">⏮️</button>
-        <button class="audio-btn primary play no" aria-label="Play/Pause">▶️</button>
-        <button class="audio-btn" aria-label="Next Chapter">⏭️</button>
+          <button class="audio-btn" aria-label="Previous Chapter">⏮️</button>
+          <button class="audio-btn primary play no" aria-label="Play/Pause">▶️</button>
+          <button class="audio-btn" aria-label="Next Chapter">⏭️</button>
         </div>
         <div class="progress">
-          <span class="time">00:00</span>
+          <span class="time time-start">00:00</span>
           <div class="track">
-            <div class="fill" style="width: 0%"></div>
+            <div class="fill" style="width: 30vw"></div>
           </div>
           <span class="time">03:21</span>
         </div>
       </div>
     </section>
+
     <div class="picker-actions">
-  <button class="pill-btn" aria-label="Previous Chapter">← Prev</button>
-  <button class="pill-btn" aria-label="Next Chapter">Next →</button>
-</div>
+      <button class="pill-btn" aria-label="Previous Chapter">← Prev</button>
+      <button class="pill-btn" aria-label="Next Chapter">Next →</button>
+    </div>
   </main>
 
   <!-- Bottom Navbar -->
@@ -121,9 +123,8 @@
       <span class="label">Video</span>
     </a>
   </nav>
+
   <script src="https://js.puter.com/v2/"></script>
-  <script type="text/javascript" charset="utf-8" src="../assets/scripts/bible.js">
-    
-  </script>
+  <script type="text/javascript" charset="utf-8" src="../assets/scripts/bible.js"></script>
 </body>
 </html>
