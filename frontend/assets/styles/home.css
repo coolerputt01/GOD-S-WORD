@@ -102,6 +102,21 @@ body {
   color: white;
   width: 100%;
 }
+.loader {
+  display: none;
+  width: 28px;
+  height: 28px;
+  border: 3px solid #c2eaff;
+  border-top: 3px solid cyan;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 .verse-card h3,
 .verse-card p,
@@ -239,6 +254,7 @@ body {
   border-top: 1px solid #eee;
   z-index: 20;
 }
+
 
 .nav-link {
   display: flex;
